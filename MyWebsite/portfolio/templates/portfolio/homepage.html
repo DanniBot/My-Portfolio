@@ -17,26 +17,207 @@
         </h6>
         </div>
     </div>
-    <h2 class="mt-5">Portfolio</h2>
-    <hr>
-        <div class="row">
-            {% for project in projects %}
-                <div class="col-lg-4 col-md-6">
-            
-                {% if project.link %}
-                <a href="{{ project.link }}">
+
+    <div class="mt-5">
+        {% if DJ_projects %}
+        <div>
+            <h2>Django Projects</h2>
+            <!-- <p class="description">Projects made by using Django Framework</p> -->
+            <img class="badges" src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white">
+            <img class="badges" src="https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)">
+            <img class="badges" src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white">
+            <img class="badges" src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white">
+            <img class="badges" src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+            <img class="badges" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
+            <img class="badges" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+            <img class="badges" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+            <hr>
+            <div class="row">
+                {% for project in DJ_projects %}
+                    <div class="col-lg-4 col-md-6">
+                
+                    {% if project.link %}
+                    <a href="{{ project.link }}">
+                        <img src="{{ project.image.url }}" class="img-fluid mb-2">
+                    </a>
+                    <a href="{{ project.link }}">
+                        <h4 class="title-link">{{ project.title }}</h4>
+                    </a>
+                    {% else %}
+                
                     <img src="{{ project.image.url }}" class="img-fluid mb-2">
-                </a>
-                {% else %}
-            
-                <img src="{{ project.image.url }}" class="img-fluid mb-2">
-                {% endif %}
-                <h3>{{ project.title }}</h3>
-                <p>{{ project.description }}</p>
-            
-                </div>
-            {% endfor %}
+                    <h4>{{ project.title }}</h4>
+                    {% endif %}
+                    <p>{{ project.description }}</p>
+                
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if FL_projects %}
+        <div class="topic" >
+            <h2>Flask Projects</h2>
+            <p class="description">
+                Projects made by using Flask Framework
+            </p>
+            <hr>
+            <div class="row">
+                {% for project in FL_projects %}
+                    <div class="col-lg-4 col-md-6">
+                
+                    {% if project.link %}
+                    <a href="{{ project.link }}">
+                        <img src="{{ project.image.url }}" class="img-fluid mb-2">
+                    </a>
+                    <a href="{{ project.link }}">
+                        <h4 class="title-link">{{ project.title }}</h4>
+                    </a>
+                    {% else %}
+                
+                    <img src="{{ project.image.url }}" class="img-fluid mb-2">
+                    <h4>{{ project.title }}</h4>
+                    {% endif %}
+                    <p>{{ project.description }}</p>
+                
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if Py_projects %}
+        <div class="topic">
+            <h2>Python Projects</h2>
+            <!-- <p class="description">
+                Projects completely made by python,using various packages
+            </p> -->
+            <img class="badges" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
+            <img class="badges" src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white">
+            <hr>
+            <div class="row">
+                {% for project in Py_projects %}
+                    <div class="col-lg-4 col-md-6">
+                
+                    {% if project.link %}
+                    <a href="{{ project.link }}">
+                        <img src="{{ project.image.url }}" class="img-fluid mb-2">
+                    </a>
+                    <a href="{{ project.link }}">
+                        <h4 class="title-link">{{ project.title }}</h4>
+                    </a>
+                    {% else %}
+                
+                    <img src="{{ project.image.url }}" class="img-fluid mb-2">
+                    <h4>{{ project.title }}</h4>
+                    {% endif %}
+                    <p>{{ project.description }}</p>
+                
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if Ru_projects %}
+        <div class="topic">
+            <h2>Rust Projects</h2>
+            <!-- <p class="description">
+                Projects programmed in Rust language
+            </p> -->
+            <img class="badges" src="https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white">
+            <hr>
+            <div class="row">
+                {% for project in Ru_projects %}
+                    <div class="col-lg-4 col-md-6">
+                
+                    {% if project.link %}
+                    <a href="{{ project.link }}">
+                        <img src="{{ project.image.url }}" class="img-fluid mb-2">
+                    </a>
+                    <a href="{{ project.link }}">
+                        <h4 class="title-link">{{ project.title }}</h4>
+                    </a>
+                    {% else %}
+                
+                    <img src="{{ project.image.url }}" class="img-fluid mb-2">
+                    <h4>{{ project.title }}</h4>
+                    {% endif %}
+                    <p>{{ project.description }}</p>
+                
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if ML_projects %}
+        <div class="topic">
+            <h2>Machine Learning Projects</h2>
+            <!-- <p class="description">
+                Machine learning / Deep learning projects
+            </p> -->
+            <img class="badges" src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white">
+            <img class="badges" src="https://camo.githubusercontent.com/15ab61ce30a10d53ef73580f936329f8308021ebf6dc90f51c817d522516d40f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5079546f7263682d2532334545344332432e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d5079546f726368266c6f676f436f6c6f723d7768697465">
+            <img class="badges" src="https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white">
+            <img class="badges" src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white">
+            <img class="badges" src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white">
+            <img class="badges" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
+            <hr>
+            <div class="row">
+                {% for project in ML_projects %}
+                    <div class="col-lg-4 col-md-6">
+                
+                    {% if project.link %}
+                    <a href="{{ project.link }}">
+                        <img src="{{ project.image.url }}" class="img-fluid mb-2">
+                    </a>
+                    <a href="{{ project.link }}">
+                        <h4 class="title-link">{{ project.title }}</h4>
+                    </a>
+                    {% else %}
+                
+                    <img src="{{ project.image.url }}" class="img-fluid mb-2">
+                    <h4>{{ project.title }}</h4>
+                    {% endif %}
+                    <p>{{ project.description }}</p>
+                
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if PB_projects %}
+        <div class="topic">
+            <h2>Publications</h2>
+            <hr>
+            <div class="row">
+                {% for project in PB_projects %}
+                    <div class="col-lg-4 col-md-6">
+                
+                    {% if project.link %}
+                    <a href="{{ project.link }}">
+                        <img src="{{ project.image.url }}" class="img-fluid mb-2">
+                    </a>
+                    <a href="{{ project.link }}">
+                        <h4 class="title-link">{{ project.title }}</h4>
+                    </a>
+                    {% else %}
+                
+                    <img src="{{ project.image.url }}" class="img-fluid mb-2">
+                    <h4>{{ project.title }}</h4>
+                    {% endif %}
+                    <p>{{ project.description }}</p>
+                
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
     </div>
+    
     
     {% endblock %}
 
