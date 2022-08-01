@@ -22,6 +22,12 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .topic {
     margin-top: 30px;
     margin-bottom: 20px;
